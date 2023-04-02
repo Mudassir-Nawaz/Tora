@@ -1,0 +1,144 @@
+{{ define "main"}}
+
+<!-- "contacts" section start -->
+<section id="contacts">
+    <div class="section bg-secondary">
+        <div class="section-content container">
+            <div class="text-center">
+                <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                    We answer within 24 hours
+                </small>
+                <h1>Contact Us</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form action="#" class="row mt-17">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="first_name" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="first_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="last_name" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="last_name"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" class="form-control" id="phone"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="service" class="form-label">Select the service</label>
+                                <select class="custom-select" id="service">
+                                    <option value="1">Kitchen Remodeling</option>
+                                    <option value="2">Bathroom Remodeling</option>
+                                    <option value="3">Roofing</option>
+                                    <option value="4">Windows & Doors</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="zip-code" class="form-label">Your zip code</label>
+                                <input type="text" class="form-control" id="zip-code"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
+                            <div class="form-group form-check mb-9 mb-md-0">
+                                <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
+                                <label class="form-check-label" for="exampleCheck2">
+                                    I've read and agree with the <a href="#">Terms & Policy</a>
+                                </label>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary btn-lg">Send message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "contacts" section end -->
+
+<!-- "frequently asked questions" section start -->
+<section class="section" id="faq">
+    <div class="section-content container">
+        <h1 class="mb-17 text-center">FAQ</h1>
+        <article class="faq faq-open">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-1" aria-expanded="true">
+                <h1 class="faq-title">What is Swedish massage?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse show" id="faq-item-1">
+                <p>Dictumst placerat suscipit dui suspendisse lacus ridiculus dis facilisis massa commodo,
+                    feugiat sagittis eleifend arcu erat tempor integer sollicitudin metus, mollis bibendum
+                    vestibulum diam nec tellus felis tristique pretium.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-2" aria-expanded="false">
+                <h1 class="faq-title">What types of services does Blys offer?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-2">
+                <p>Accumsan nibh facilisis efficitur netus dapibus facilisi proin lacinia, finibus phasellus
+                    quis placerat ante per lorem senectus nisl, gravida vestibulum eros aenean sed convallis
+                    purus.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-3" aria-expanded="false">
+                <h1 class="faq-title">Can I pick my therapist?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-3">
+                <p>Fames pulvinar fringilla ut lorem sem auctor nunc, aptent cursus convallis nisi penatibus nam
+                    gravida, commodo tortor facilisi diam posuere class.</p>
+            </div>
+        </article>
+        <article class="faq">
+            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-4" aria-expanded="false">
+                <h1 class="faq-title">Can I re-book with the same therapists?</h1>
+                <div class="faq-toggle">
+                    <i class="material-icons faq-toggle-closed">add</i>
+                    <i class="material-icons faq-toggle-open">remove</i>
+                </div>
+            </header>
+            <div class="faq-body collapse" id="faq-item-4">
+                <p>Nostra ipsum tortor habitasse ante lacinia class, conubia elit taciti pulvinar rhoncus
+                    gravida, metus mollis id ut suspendisse.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- "frequently asked questions" section end -->
+
+{{end}}

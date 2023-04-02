@@ -1,0 +1,49 @@
+# main menu
+[[main]]
+name = "Our Story"
+url = "about/"
+weight = 1
+
+# [[main]]
+# name = "Menu"
+# url = "menu/"
+# weight = 2
+
+[[main]]
+name = "Promotion"
+url = "promotions/"
+weight = 3
+
+[[main]]
+name = "Events"
+url = "events/"
+weight = 4
+
+[[main]]
+identifier = "branches"
+name = "Branches"
+url = "#"
+weight = 5
+
+[[main]]
+name = "Tora Lasella"
+url = "tora-lasella/"
+parent = "branches"
+weight = 1
+
+[[main]]
+name = "Tora City Connect"
+url = "tora-city-connect/"
+parent = "branches"
+weight = 2
+
+[[main]]
+name = "Tora Crystal Design Center"
+url = "tora-crystal-design-center/"
+parent = "branches"
+weight = 3
+
+[[main]]
+name = "Reservations"
+url = "reservation/"
+weight = 6

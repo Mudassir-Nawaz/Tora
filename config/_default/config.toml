@@ -1,0 +1,9 @@
+baseURL = '/'
+title = 'My New Hugo Site'
+enableRobotsTXT = true
+
+[markup]
+  taskLists = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,69 @@
+{{ define "main"}}
+
+{{with .Params.hero_section}}
+{{if.enable}}
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <img src="/img/homepage/cover.jpg" alt="hero background" class="jarallax-img"/>
+        <video src=""></video>
+        <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.25)"></div>
+    </div>
+    <div class="hero-foreground hero-foreground-gradient-black-left d-flex flex-column justify-content-center justify-content-md-center">
+        <div class="container text-white py-14 py-md-23 py-lg-25 text-center text-md-left">
+            <h1 class="fs-10 fs-lg-11 font-weight-bold mt-10 mb-16">
+                {{ .hero_text }}<br/>{{ .hero_location }}
+            </h1>
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                {{with .hero_button}}
+                {{if.enable}}
+                <a href="#" class="btn btn-primary btn-lg">{{ .title }}</a>
+                <!-- <a href="#" class="btn btn-ghost btn-lg border-0">Reservation</a> -->
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+<div id="hero-end-anchor"></div>
+<!-- main hero end -->
+{{ end }}
+{{ end }}
+
+{{ with .Params.events }}
+{{ if.enable }}
+<!-- "events" section start -->
+<section class="section" id="news">
+    <div class="section-content container">
+        <div class="d-flex justify-content-between align-items-center align-items-lg-end flex-column flex-lg-row">
+            <div class="text-center text-lg-left">
+                <h1>{{ .title }}</h1>
+            </div>
+        </div>
+        <div class="row mt-17">
+            {{range .promo_items}}
+            <div class="col-12 col-md-6">
+                <div class="card text-white mb-14 mb-md-0">
+                    <img src="{{ .img }}" class="card-img object-fit-cover" alt="photo" height="380">
+                    <div class="card-img-overlay bg-gradient-black-bottom d-flex flex-column justify-content-end p-15 p-md-20">
+                        <h2 class="card-title fs-6 fs-md-7 fs-lg-9">{{ .title }}</h2>
+                        <p class="card-text">{{ .date }}</p>
+                        <div>
+                            <a href="{{ .btn_link }}" class="btn btn-link">{{ .btn_title }}</a>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="{{ .btn_link }}" class="btn btn-lg btn-outline-primary">{{ .btn_title }}</a>
+        </div>
+    </div>
+</section>
+<!-- "events" section end -->
+{{end}}
+{{end}}
+
+{{end}}

@@ -1,0 +1,38 @@
+############################# English ############################
+[en]
+languageName = "EN"
+flag = "/assets/img/language-eng.png"
+title = "Tora"
+contentDir = "content/english" # content/english
+weight = 1
+###########  content ##########
+footer_content = "All Rights Reserved © 2023 D and C Horeca Services Co., Ltd "
+head_btn = "Order Now"
+head_link = "#"
+logo_link = "/"
+
+#############################   Thai  ############################
+[th]
+languageName = "TH"
+flag = "/assets/img/language-th.png"
+title = "Tora"
+contentDir = "content/thai" # content/german
+weight = 2
+###########  content ##########
+footer_content = "All Rights Reserved © 2023 D and C Horeca Services Co., Ltd "
+head_btn = "สั่งซื้อตอนนี้"
+head_link = "#"
+logo_link = "/th"
+
+#############################   Italian  ############################
+[it]
+languageName = "IT"
+flag = "/assets/img/language-it.png"
+title = "Tora"
+contentDir = "content/italian" # content/italian
+weight = 3
+###########  content ##########
+footer_content = "All Rights Reserved © 2023 D and C Horeca Services Co., Ltd "
+head_btn = "lorem ipsum"
+head_link = "#"
+logo_link = "/it"

@@ -1,0 +1,196 @@
+{{ define "main" }}
+
+{{with .Params.hero_section}}
+{{if.enable}}
+<!-- main hero start -->
+<section class="hero hero-fullscreen jarallax" data-speed="0.2" style="min-height: calc(100vh - 140px)">
+    <div class="hero-background">
+        <video src="/img/Clip/TORA COVER Final.mov" class="jarallax-img" autoplay muted></video>
+        <!-- <img src="{{ .bg_img }}" alt="hero background" class="jarallax-img"/> -->
+        <video src=""></video>
+        <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.25)"></div>
+    </div>
+    <div class="hero-foreground hero-foreground-gradient-black-left d-flex flex-column justify-content-center justify-content-md-center">
+        <div class="container text-white py-14 py-md-23 py-lg-25 text-center text-md-left">
+            <h1 class="fs-10 fs-lg-11 font-weight-bold mt-10 mb-16">
+                {{ .hero_text }}<br/>{{ .hero_location }}
+            </h1>
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                {{with .hero_button}}
+                {{if.enable}}
+                <a href="{{ .btn_link }}" class="btn btn-primary btn-lg">{{ .title }}</a>
+                <!-- <a href="#" class="btn btn-ghost btn-lg border-0">Reservation</a> -->
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+<div id="hero-end-anchor"></div>
+<!-- main hero end -->
+{{ end }}
+{{ end }}
+
+{{with .Params.about_section}}
+{{if.enable}}
+<!-- "about" section start -->
+<section class="section" id="about">
+    <div class="section-content container">
+        <div class="row text-center text-lg-left mt-15 mt-lg-20 align-items-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="pl-0 pl-xl-7 pr-0 pr-xl-16">
+                    <h1 class="mb-0">{{ .heading }}</h1>
+                    <span class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">{{ .sm_text }}</span>
+                    <p class="mt-8 mb-0">{{ .description }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mb-15 mb-lg-0">
+                <div class="image-slider mr-0 mr-xl-7">
+                    <img src="{{ .img }}" alt="image" class="image-slider-item"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "about" section end -->
+{{ end }}
+{{ end }}
+
+{{ with .Params.menu_section }}
+{{if.enable}}
+<!-- "our work" section start -->
+<section class="section bg-secondary" id="our-work">
+    <div class="section-content text-center container">
+        <div class="d-flex justify-content-center justify-content-md-between align-items-end">
+            <div class="text-center text-md-left">
+                <h1>{{ .heading }}</h1>
+            </div>
+        </div>
+        <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-md-2 shuffle-grid-cols-xl-4 mt-14" id="projects-grid">
+            {{ range .menu_items }}
+            <div class="shuffle-grid-item" data-groups="makeup">
+                <div class="card card-square bg-transparent border-0">
+                    <div class="card-bg" style="background-image: url({{ . }})"></div>
+                    <!-- <div class="card-bg card-bg-hover" style="background-color: rgba(0,0,0,.6)"></div>
+                    <div class="card-body card-body-hover text-white d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-8">zoom_in</i>
+                    </div> -->
+                    <!-- <a href="#" class="card-link-overlay"></a> -->
+                </div>
+            </div>
+            {{end}}
+        </div>
+        <div class="d-flex justify-content-center justify-content-md-between align-items-end mt-20">
+            <div class="text-center text-md-left">
+                <p class="text-center">{{ .description }}</p>
+            </div>
+        </div>
+        {{ with .menu_btn }}
+        {{if.enable}}
+        <a href="{{ .link }}" class="btn btn-primary btn-lg mt-20">{{ .title }}</a>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+<!-- "our work" section end -->
+{{ end }}
+{{ end }}
+
+{{ with .Params.gallery }}
+{{if.enable}}
+<!-- "gallery" section start -->
+<section class="section" id="gallery">
+    <div class="section-content container">
+        <h1 class="mb-17 text-center">{{ .title }}</h1>
+        <div class="image-slider">
+            <a href="#" class="image-slider-prev d-none d-md-flex">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <a href="#" class="image-slider-next d-none d-md-flex">
+                <i class="material-icons">arrow_forward</i>
+            </a>
+            <div class="image-slider-contents">
+                {{ range .gallery_items }}
+                <img src="{{ . }}" alt="image" class="image-slider-item" height="600" />
+                {{end}}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- "gallery" section end -->
+{{end}}
+{{end}}
+
+{{ with .Params.promotions }}
+{{ if.enable }}
+<!-- "promotions" section start -->
+<section class="section" id="news">
+    <div class="section-content container">
+        <div class="d-flex justify-content-between align-items-center align-items-lg-end flex-column flex-lg-row">
+            <div class="text-center text-lg-left">
+                <h1>{{ .title }}</h1>
+            </div>
+        </div>
+        <div class="row mt-17">
+            {{range .promo_items}}
+            <div class="col-12 col-md-6">
+                <div class="card text-white mb-14 mb-md-0">
+                    <img src="{{ .img }}" class="card-img object-fit-cover" alt="photo" height="380">
+                    <div class="card-img-overlay bg-gradient-black-bottom d-flex flex-column justify-content-end p-15 p-md-20">
+                        <h2 class="card-title fs-6 fs-md-7 fs-lg-9">{{ .title }}</h2>
+                        <p class="card-text">{{ .date }}</p>
+                        <div>
+                            <a href="{{ .btn_link }}" class="btn btn-link">{{ .btn_title }}</a>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="{{ .btn_link }}" class="btn btn-lg btn-outline-primary">{{ .btn_title }}</a>
+        </div>
+    </div>
+</section>
+<!-- "promotions" section end -->
+{{end}}
+{{end}}
+
+{{ with .Params.events }}
+{{if.enable}}
+<!-- "Events" section start -->
+<section class="section" id="news">
+    <div class="section-content container">
+        <div class="d-flex justify-content-between align-items-center align-items-lg-end flex-column flex-lg-row">
+            <div class="text-center text-lg-left">
+                <h1>{{ .title }}</h1>
+            </div>
+        </div>
+        <div class="row mt-17">
+            {{range .promo_items}}
+            <div class="col-12 col-md-6">
+                <div class="card text-white mb-14 mb-md-0">
+                    <img src="{{ .img }}" class="card-img object-fit-cover" alt="photo" height="380">
+                    <div class="card-img-overlay bg-gradient-black-bottom d-flex flex-column justify-content-end p-15 p-md-20">
+                        <h2 class="card-title fs-6 fs-md-7 fs-lg-9">{{ .title }}</h2>
+                        <p class="card-text">{{ .date }}</p>
+                        <div>
+                            <a href="{{ .btn_link }}" class="btn btn-link">{{ .btn_title }}</a>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link-overlay"></a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+        <div class="mt-19 mt-lg-20 text-center">
+            <a href="{{ .btn_link }}" class="btn btn-lg btn-outline-primary">{{ .btn_title }}</a>
+        </div>
+    </div>
+</section>
+<!-- "Events" section end -->
+{{end}}
+{{end}}
+
+{{ end }}
