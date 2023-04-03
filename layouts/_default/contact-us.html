@@ -79,66 +79,30 @@
 </section>
 <!-- "contacts" section end -->
 
+{{ with .Params.faq }}
+{{if.enable}}
 <!-- "frequently asked questions" section start -->
 <section class="section" id="faq">
     <div class="section-content container">
-        <h1 class="mb-17 text-center">FAQ</h1>
-        <article class="faq faq-open">
-            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-1" aria-expanded="true">
-                <h1 class="faq-title">What is Swedish massage?</h1>
+        <h1 class="mb-17 text-center">{{ .title }}</h1>
+        {{ range .faq_items }}
+        <article class="faq {{ .open }}">
+            <header class="faq-header" data-toggle="collapse" data-target="#{{ .id }}" aria-expanded="true">
+                <h1 class="faq-title">{{ .question }}</h1>
                 <div class="faq-toggle">
                     <i class="material-icons faq-toggle-closed">add</i>
                     <i class="material-icons faq-toggle-open">remove</i>
                 </div>
             </header>
-            <div class="faq-body collapse show" id="faq-item-1">
-                <p>Dictumst placerat suscipit dui suspendisse lacus ridiculus dis facilisis massa commodo,
-                    feugiat sagittis eleifend arcu erat tempor integer sollicitudin metus, mollis bibendum
-                    vestibulum diam nec tellus felis tristique pretium.</p>
+            <div class="faq-body collapse {{ .show }}" id="{{ .id }}">
+                <p>{{ .answer }}</p>
             </div>
         </article>
-        <article class="faq">
-            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-2" aria-expanded="false">
-                <h1 class="faq-title">What types of services does Blys offer?</h1>
-                <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
-                </div>
-            </header>
-            <div class="faq-body collapse" id="faq-item-2">
-                <p>Accumsan nibh facilisis efficitur netus dapibus facilisi proin lacinia, finibus phasellus
-                    quis placerat ante per lorem senectus nisl, gravida vestibulum eros aenean sed convallis
-                    purus.</p>
-            </div>
-        </article>
-        <article class="faq">
-            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-3" aria-expanded="false">
-                <h1 class="faq-title">Can I pick my therapist?</h1>
-                <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
-                </div>
-            </header>
-            <div class="faq-body collapse" id="faq-item-3">
-                <p>Fames pulvinar fringilla ut lorem sem auctor nunc, aptent cursus convallis nisi penatibus nam
-                    gravida, commodo tortor facilisi diam posuere class.</p>
-            </div>
-        </article>
-        <article class="faq">
-            <header class="faq-header" data-toggle="collapse" data-target="#faq-item-4" aria-expanded="false">
-                <h1 class="faq-title">Can I re-book with the same therapists?</h1>
-                <div class="faq-toggle">
-                    <i class="material-icons faq-toggle-closed">add</i>
-                    <i class="material-icons faq-toggle-open">remove</i>
-                </div>
-            </header>
-            <div class="faq-body collapse" id="faq-item-4">
-                <p>Nostra ipsum tortor habitasse ante lacinia class, conubia elit taciti pulvinar rhoncus
-                    gravida, metus mollis id ut suspendisse.</p>
-            </div>
-        </article>
+        {{end}}
     </div>
 </section>
 <!-- "frequently asked questions" section end -->
+{{end}}
+{{end}}
 
 {{end}}
