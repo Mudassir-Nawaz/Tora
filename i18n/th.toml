@@ -1,0 +1,49 @@
+[CONTACT_FORM_FIELD_EMAIL]
+  other = "Email"
+[CONTACT_FORM_FIELD_PHONE]
+  other = "Phone Number"
+[CONTACT_FORM_FIELD_SERVICES]
+  other = "Services"
+[CONTACT_FORM_FIELD_MESSAGE]
+  other = "Message"
+[CONTACT_FORM_FIELD_FULL_NAME]
+  other = "FULL Name"
+[CONTACT_FORM_FIELD_FIRST_NAME]
+  other = "First Name"
+[CONTACT_FORM_FIELD_LAST_NAME]
+  other = "Last Name"
+[CONTACT_FORM_FIELD_ZIPCODE]
+  other = "ZIPCODE"
+[CONTACT_FORM_FIELD_ADDRESS]
+  other = "ADDRESS"
+[CONTACT_FORM_SUBMIT_SEND_MESSAGE]
+  other = "Send A Message"
+[CONTACT_FORM_FIELD_AGREED]
+  other = "I have agreed to"
+[CONTACT_FORM_FIELD_PAGE]
+  other = "privacy-policy"
+[CHOOSE_SERVICE_SECTION_TITLE]
+  other = "Choose an option"
+[CHOOSE_DATE_SECTION_TITLE]
+  other = "Choose date"
+[PAYMENT_SECTION_TITLE]
+  other = "PAYMENT"
+[MORNING]
+  other = "MORNING"
+[AFTERNOON]
+  other = "AFTERNOON"
+[EVENING]
+  other = "EVENING"
+[ADD_INFORMATION_SECTION_TITLE]
+  other = "Add information"
+[CARD_NUMBER]
+  other = "CARD NUMBER"
+[CARD_NAME]
+  other = "CARD NAME"
+[EXPIRY_DATE]
+  other = "EXPIRY DATE"
+[CVC]
+  other = "CVC"
+[CVC_HELP]
+  other = "CVC NUMBER IS BEHIND YOUR CARD"
+

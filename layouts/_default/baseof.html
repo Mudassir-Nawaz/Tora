@@ -147,9 +147,9 @@
       {{ block "main" . }}
       {{ end }}
     </main>
-
+    
     <!-- Footer -->
-    {{ partial "footer"}}
+    {{ partial "footer" (dict "footer_link1_title" "Privacy Policy" "footer_link1" "/privacy-policy/" "footer_link2_title" "Terms" "footer_link1" "/terms/" ) }}
     <!-- JS scripts -->
     {{ partial "scripts"}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

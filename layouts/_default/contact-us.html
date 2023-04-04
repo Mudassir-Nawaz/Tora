@@ -1,62 +1,62 @@
 {{ define "main"}}
-
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ with $data.contact.contact }}
 <!-- "contacts" section start -->
 <section id="contacts">
     <div class="section bg-secondary">
         <div class="section-content container">
             <div class="text-center">
                 <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                    We answer within 24 hours
+                    {{.sm_text}}
                 </small>
-                <h1>Contact Us</h1>
+                <h1>{{.title}}</h1>
             </div>
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <form action="#" class="row mt-17">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="first_name" class="form-label">First name</label>
+                                <label for="first_name" class="form-label">{{ i18n "CONTACT_FORM_FIELD_FIRST_NAME" . }}</label>
                                 <input type="text" class="form-control" id="first_name"/>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="last_name" class="form-label">Last name</label>
+                                <label for="last_name" class="form-label">{{ i18n "CONTACT_FORM_FIELD_LAST_NAME" . }}</label>
                                 <input type="text" class="form-control" id="last_name"/>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="phone" class="form-label">Phone</label>
+                                <label for="phone" class="form-label">{{ i18n "CONTACT_FORM_FIELD_PHONE" . }}</label>
                                 <input type="text" class="form-control" id="phone"/>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label">{{ i18n "CONTACT_FORM_FIELD_EMAIL" . }}</label>
                                 <input type="text" class="form-control" id="email"/>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="service" class="form-label">Select the service</label>
+                                <label for="service" class="form-label">{{ i18n "CONTACT_FORM_FIELD_SERVICES" . }}</label>
                                 <select class="custom-select" id="service">
-                                    <option value="1">Kitchen Remodeling</option>
-                                    <option value="2">Bathroom Remodeling</option>
-                                    <option value="3">Roofing</option>
-                                    <option value="4">Windows & Doors</option>
+                                    {{ range .options }}
+                                    <option value="{{.value}}">{{.name}}</option>
+                                    {{end}}
                                 </select>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label for="zip-code" class="form-label">Your zip code</label>
+                                <label for="zip-code" class="form-label">{{ i18n "CONTACT_FORM_FIELD_ZIPCODE" . }}</label>
                                 <input type="text" class="form-control" id="zip-code"/>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
+                                <label for="message" class="form-label">{{ i18n "CONTACT_FORM_FIELD_MESSAGE" . }}</label>
                                 <textarea id="message" class="form-control" rows="3"></textarea>
                             </div>
                         </div>
@@ -64,11 +64,11 @@
                             <div class="form-group form-check mb-9 mb-md-0">
                                 <input type="checkbox" class="custom-checkbox" id="exampleCheck2" checked/>
                                 <label class="form-check-label" for="exampleCheck2">
-                                    I've read and agree with the <a href="#">Terms & Policy</a>
+                                    {{ i18n "CONTACT_FORM_FIELD_AGREED" . }} <a href="/privacy-policy/">{{ i18n "CONTACT_FORM_FIELD_PAGE" . }}</a>
                                 </label>
                             </div>
                             <div class="form-group mb-0">
-                                <button class="btn btn-primary btn-lg">Send message</button>
+                                <input class="btn btn-primary btn-lg" value='{{ i18n "CONTACT_FORM_SUBMIT_SEND_MESSAGE" }}'>
                             </div>
                         </div>
                     </form>
@@ -77,6 +77,7 @@
         </div>
     </div>
 </section>
+{{end}}
 <!-- "contacts" section end -->
 
 {{ with .Params.faq }}

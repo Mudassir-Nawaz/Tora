@@ -69,4 +69,6 @@ events:
       btn_title: Learn More
       btn_link: "#"
 
+footer:
+  menu: "title"
 ---

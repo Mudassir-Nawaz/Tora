@@ -1,0 +1,51 @@
+reservation:
+  title: Reservation Title
+  service_item:
+    - title: Service Name
+      value: 1
+      description: "Focused attention on the essentials: your back, neck and shoulders, where you need it most! Addresses tension headaches & office."
+      duration:
+        - time: 50 min
+          selected: selected
+        - time: 50 min
+          selected: 
+      currency: "$"
+      price: 300
+    - title: Service Name
+      value: 1
+      description: "Focused attention on the essentials: your back, neck and shoulders, where you need it most! Addresses tension headaches & office."
+      duration:
+        - time: 50 min
+          selected: selected
+        - time: 50 min
+          selected: 
+      currency: "$"
+      price: 300
+  morning_timings:
+    - time: 9:00 am
+      value: 1
+    - time: 10:00 am
+      value: 2
+    - time: 11:00 am
+      value: 3
+  afternoon_timings:
+    - time: 9:00 am
+      value: 4
+    - time: 10:00 am
+      value: 5
+  evening_timings:
+    - time: 7:00 pm
+      value: 6
+    - time: 6:00 pm
+      value: 7
+  side_services:
+    - title: Service Name
+      time: 20mint
+      currency: $
+      price: 300
+      cta_button: Book now
+    - title: Service Name
+      time: 20mint
+      currency: $
+      price: 300
+      cta_button: Book now
