@@ -51,4 +51,42 @@ menu_section:
     enable: true
     title: PDF Menu link
     link: "#"
+
+delivery_section:
+  enable: true
+  title: Delivery
+  description: This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show.
+  rating_item:
+    - title: 5 star on example
+      icon: "/img/grab.svg"
+      stars:
+        - star
+        - star
+        - star
+        - star
+        - star_half
+    - title: 5 star on example
+      icon: "/img/grab.svg"
+      stars:
+        - star
+        - star
+        - star
+        - star
+        - star_half
+    - title: 5 star on example
+      icon: "/img/grab.svg"
+      stars:
+        - star
+        - star
+        - star
+        - star
+        - star_half
+    - title: 5 star on example
+      icon: "/img/grab.svg"
+      stars:
+        - star
+        - star
+        - star
+        - star
+        - star_half
 ---

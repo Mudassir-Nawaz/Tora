@@ -131,105 +131,46 @@
 {{ end }}
 {{ end }}
 
+{{ with .Params.delivery_section }}
+{{ if.enable }}
 <!-- "about" section start -->
 <section class="section" id="about">
     <div class="section-content container text-center">
         <!-- <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
             general contractors in new york
         </small> -->
-        <h1 class="mb-0">Delivery</h1>
+        <h1 class="mb-0">{{.title}}</h1>
         <div class="row no-gutters mt-6 mt-md-10 mt-lg-17">
             <div class="col-12 col-lg-10 offset-0 offset-lg-1">
-                <p>This is a great space to write long text about your company and your services. You can use this space
-                    to go
-                    into a little more detail about your company. Talk about your team and what services you provide.
-                    Tell your
-                    visitors the story of how you came up with the idea for your business and what makes you different
-                    from your
-                    competitors. Make your company stand out and show.</p>
+                <p>{{ .description }}</p>
             </div>
         </div>
         <div class="row mt-6 mt-md-10 mt-lg-17 vertical-divider-light">
+            {{ range .rating_item }}
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card border-0">
                     <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
                         <div class="card-icon mb-6">
-                            <img src="/img/grab.svg" alt="yelp icon" width="45">
+                            <img src="{{.icon}}" alt="yelp icon" width="45">
                         </div>
                         <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                            4.5 stars on Yelp
+                            {{ .title }}
                         </div>
                         <div class="star-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star_half</i>
+                            {{ range .stars }}
+                            <i class="material-icons">{{.}}</i>
+                            {{end}}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-0">
-                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                        <div class="card-icon mb-6">
-                            <img src="/img/yelp.svg" alt="google icon" width="45">
-                        </div>
-                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                            5 stars on Yelp
-                        </div>
-                        <div class="star-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-0">
-                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                        <div class="card-icon mb-6">
-                            <img src="/img/foodpanda.svg" alt="houzz icon" width="45">
-                        </div>
-                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                            5 stars on Houzz
-                        </div>
-                        <div class="star-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-0">
-                    <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                        <div class="card-icon mb-6">
-                            <img src="/img/facebook.svg" alt="facebook icon" width="45">
-                        </div>
-                        <div class="fs-1 lh-1 mb-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-                            4.7 stars on Facebook
-                        </div>
-                        <div class="star-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star_half</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{end}}
         </div>
     </div>
 </section>
 <!-- "about" section end -->
+{{ end }}
+{{ end }}
 
 <!-- Gmap -->
 <div class="gmap">
