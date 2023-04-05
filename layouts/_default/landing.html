@@ -172,63 +172,30 @@
 {{ end }}
 {{ end }}
 
-<!-- Gmap -->
-<div class="gmap">
+{{ with .Params.maps }}
+{{ if.enable }}
+<!-- "map" section start -->
+<section class="gmap">
     <div class="gmap-embed" data-parallax-speed="0">
-        <div class="gmap-embed-sizing-helper" style="padding-top: 500px"></div>
-        <div class="gmap-embed-inner"
-             data-options="{&quot;center&quot;:{&quot;lat&quot;:40.73774180898704,&quot;lng&quot;:-73.96465326476259},&quot;scrollwheel&quot;:false,&quot;zoom&quot;:14,&quot;disableDefaultUI&quot;:true,&quot;draggable&quot;:true}"></div>
-    </div>
-    <div class="gmap-infoboxes">
-        <div class="gmap-infobox" data-latlng="40.744978 -73.951145">
-            <div class="gmap-infobox-header">
-                <h1 class="gmap-infobox-label">Long Island Office</h1>
-            </div>
-            <div class="gmap-infobox-details">
-                <div class="gmap-infobox-details-item">
-                    47-02 11th St, Long Island City, NY 11101, USA
-                    <div>
-                        <a class="get-direction-link"
-                           href="https://maps.google.com?daddr=47-02+11th+St%2C+Long+Island+City%2C+NY+11101%2C+USA"
-                           target="_blank">Get directions</a></div>
-                </div>
-                <div class="gmap-infobox-details-item">
-                    Mon-Fri: 8:00 am - 5:00 pm<br/>
-                    Sat: 8:00 am - 3:00 pm <br/>
-                    Sun: Closed
-                </div>
-                <div class="gmap-infobox-details-item">
-                    646-846-8996 <sup>Appointments</sup><br/>
-                    212-355-2379 <sup>Fax</sup><br/>
-                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
-            </div>
+        {{if.location1}}
+        <div>
+            <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
         </div>
-        <div class="gmap-infobox" data-latlng="40.7323995 -73.9897919">
-            <div class="gmap-infobox-header">
-                <h1 class="gmap-infobox-label">Manhattan Office</h1>
-            </div>
-            <div class="gmap-infobox-details">
-                <div class="gmap-infobox-details-item">
-                    100 E 12th St, New York, NY 10003
-                    <div>
-                        <a class="get-direction-link"
-                           href="https://maps.google.com?daddr=100+E+12th+St%2C+New+York%2C+NY+10003"
-                           target="_blank">Get
-                            directions</a></div>
-                </div>
-                <div class="gmap-infobox-details-item">
-                    Mon-Fri: 8:00 am - 5:00 pm<br/>
-                    Sat: 8:00 am - 3:00 pm <br/>
-                    Sun: Closed
-                </div>
-                <div class="gmap-infobox-details-item">
-                    646-846-8996 <sup>Appointments</sup><br/>
-                    212-355-2379 <sup>Fax</sup><br/>
-                    <a href="mailto:contact@mail.com">contact@mail.com</a></div>
-            </div>
+        {{end}}
+        {{if.location2}}
+        <div>
+            <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
         </div>
+        {{end}}
+        {{if.location3}}
+        <div>
+            <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+        </div>
+        {{end}}
     </div>
-</div>
-<!-- Gmap end -->
+</section>
+<!-- "map" section end -->
+{{end}}
+{{end}}
 
 {{end}}

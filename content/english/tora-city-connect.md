@@ -90,4 +90,10 @@ delivery_section:
         - star
         - star
         - star_half
+
+maps:
+  enable: true
+  location1: true
 ---
+
+
