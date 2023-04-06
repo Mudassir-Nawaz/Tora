@@ -30,10 +30,16 @@
     <link href="/favicon.png" rel="icon" />
     <link href="/favicon.png" rel="apple-touch-icon" />
 
+    <!-- Vendor CSS Files -->
+    <link href="/assets/css/vendor.css" rel="stylesheet" />
 
-    {{ $sass := resources.Get "scss/style.scss" }}
-    {{ $style := $sass | resources.ToCSS }}
+    <!-- Template Main CSS File -->
+    <!-- <link href="/assets/css/style.css" rel="stylesheet" /> -->
+
+    {{ $vendor := resources.Get "css/vendor.css" }}
+    {{ $style := resources.Get "css/style.css" }}
     <link rel="stylesheet" href="{{$style.RelPermalink}}">
+    <link rel="stylesheet" href="{{$vendor.RelPermalink}}">
   </head>
 
   <body>

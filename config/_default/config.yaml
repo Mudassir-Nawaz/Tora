@@ -1,0 +1,12 @@
+baseURL: '/'
+title: 'My New Hugo Site'
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+primary_color: red
+params:
+  primary_color: "red"
